@@ -1,0 +1,25 @@
+This project implements Tsai's method for camera calibration, specifically targeting a Logitech C270 webcam. The primary goal is to achieve an accurate correspondence between objects in a three-dimensional environment and their representation in the two-dimensional space of captured images. This involves addressing the complexities of linear projection and optical distortions.
+
+Key aspects of the project include:
+
+Modeling Linear Projection: Utilizing mathematical models to represent the linear projection from 3D space to 2D images, considering both intrinsic and extrinsic parameters of the camera.
+Handling Optical Distortions: Understanding and compensating for optical distortions that affect image space, potentially complicating the projection process.
+Parameter Determination: Using inverse problem-solving to determine the projection parameters based on known physical dimensions of objects and their captured image representations.
+Tsai's Method Implementation: Applying Tsai's method to establish a system of linear equations linking projection parameters with known coordinates in object space and pixel space.
+Practical Application: Employing a calibration target (mire) to facilitate the acquisition of precise coordinate data for calibration.
+Verification and Comparison: Assessing the accuracy of the calibration by comparing projected coordinates with actual image coordinates and discussing challenges encountered with alternative methods like cv2.calibrateCamera.
+This project is crucial for applications in augmented reality, 3D modeling, and computer vision, where precise camera calibration is essential for accurate image analysis and projection.
+
+Usage:
+Calibration Process: Follow the detailed steps outlined in the documentation to calibrate your camera using Tsai's method.
+Data Requirements: Use a calibration target (mire) for capturing images at different heights to gather necessary data.
+Parameter Calculation: Employ the provided scripts to calculate the intrinsic and extrinsic parameters of your camera.
+Testing and Validation: Test the accuracy of the calibration by projecting 3D coordinates onto the 2D image and comparing them with actual image data.
+Dependencies:
+Python (with libraries such as OpenCV for image processing and NumPy for numerical computations)
+A Logitech C270 webcam or similar for practical application
+Repository Structure:
+/src: Contains the source code and scripts for camera calibration.
+/data: Sample images and data used for calibration.
+/docs: Documentation and detailed explanation of the methodology and implementation.
+/results: Results of the calibration process, including comparisons and error analysis.
